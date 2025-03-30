@@ -1,0 +1,20 @@
+{
+    "queries": [
+        {
+            "question": "What are the symptoms of diabetes?",
+            "expected_response": "Diabetes symptoms include high blood sugar, frequent urination, and increased thirst."
+        },
+        {
+            "question": "What is the treatment for diabetes?",
+            "expected_response": "Diabetes treatment includes insulin, diet control, and exercise."
+        },
+        {
+            "question": "Can diabetes be cured?",
+            "expected_response": "Diabetes cannot be fully cured, but it can be managed with medication and lifestyle changes."
+        },
+        {
+            "question": "What are the causes of hypertension?",
+            "expected_response": "Hypertension can be caused by high salt intake, stress, obesity, and lack of exercise."
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.com/healthcare_ontology#"
+     xml:base="http://www.example.com/healthcare_ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     
+    <owl:Ontology rdf:about="http://www.example.com/healthcare_ontology"/>
+
+    <!-- Define Classes -->
+    <owl:Class rdf:about="#Disease"/>
+    <owl:Class rdf:about="#Symptom"/>
+    <owl:Class rdf:about="#Treatment"/>
+    <owl:Class rdf:about="#Cause"/>
+    <owl:Class rdf:about="#Prevention"/>
+    <owl:Class rdf:about="#RiskFactor"/>
+    
+    <!-- Define Object Properties -->
+    <owl:ObjectProperty rdf:about="#hasSymptom">
+        <rdfs:domain rdf:resource="#Disease"/>
+        <rdfs:range rdf:resource="#Symptom"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="#hasTreatment">
+        <rdfs:domain rdf:resource="#Disease"/>
+        <rdfs:range rdf:resource="#Treatment"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="#hasCause">
+        <rdfs:domain rdf:resource="#Disease"/>
+        <rdfs:range rdf:resource="#Cause"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="#hasPrevention">
+        <rdfs:domain rdf:resource="#Disease"/>
+        <rdfs:range rdf:resource="#Prevention"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="#hasRiskFactor">
+        <rdfs:domain rdf:resource="#Disease"/>
+        <rdfs:range rdf:resource="#RiskFactor"/>
+    </owl:ObjectProperty>
+
+    <!-- Example Disease: Diabetes -->
+    <owl:NamedIndividual rdf:about="#Diabetes">
+        <rdf:type rdf:resource="#Disease"/>
+        <hasSymptom rdf:resource="#ExcessiveThirst"/>
+        <hasSymptom rdf:resource="#FrequentUrination"/>
+        <hasSymptom rdf:resource="#Fatigue"/>
+        <hasTreatment rdf:resource="#InsulinTherapy"/>
+        <hasTreatment rdf:resource="#DietControl"/>
+        <hasCause rdf:resource="#InsulinDeficiency"/>
+        <hasPrevention rdf:resource="#HealthyDiet"/>
+        <hasRiskFactor rdf:resource="#Obesity"/>
+        <hasRiskFactor rdf:resource="#FamilyHistory"/>
+    </owl:NamedIndividual>
+
+    <!-- Example Disease: Malaria -->
+    <owl:NamedIndividual rdf:about="#Malaria">
+        <rdf:type rdf:resource="#Disease"/>
+        <hasSymptom rdf:resource="#Fever"/>
+        <hasSymptom rdf:resource="#Chills"/>
+        <hasSymptom rdf:resource="#Headache"/>
+        <hasTreatment rdf:resource="#AntimalarialDrugs"/>
+        <hasCause rdf:resource="#MosquitoBite"/>
+        <hasPrevention rdf:resource="#MosquitoNet"/>
+        <hasRiskFactor rdf:resource="#TravelToEndemicArea"/>
+    </owl:NamedIndividual>
+
+    <!-- Symptoms -->
+    <owl:NamedIndividual rdf:about="#ExcessiveThirst">
+        <rdf:type rdf:resource="#Symptom"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#FrequentUrination">
+        <rdf:type rdf:resource="#Symptom"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Fatigue">
+        <rdf:type rdf:resource="#Symptom"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Fever">
+        <rdf:type rdf:resource="#Symptom"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Chills">
+        <rdf:type rdf:resource="#Symptom"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Headache">
+        <rdf:type rdf:resource="#Symptom"/>
+    </owl:NamedIndividual>
+
+    <!-- Treatments -->
+    <owl:NamedIndividual rdf:about="#InsulinTherapy">
+        <rdf:type rdf:resource="#Treatment"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#DietControl">
+        <rdf:type rdf:resource="#Treatment"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#AntimalarialDrugs">
+        <rdf:type rdf:resource="#Treatment"/>
+    </owl:NamedIndividual>
+
+    <!-- Causes -->
+    <owl:NamedIndividual rdf:about="#InsulinDeficiency">
+        <rdf:type rdf:resource="#Cause"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#MosquitoBite">
+        <rdf:type rdf:resource="#Cause"/>
+    </owl:NamedIndividual>
+
+    <!-- Preventions -->
+    <owl:NamedIndividual rdf:about="#HealthyDiet">
+        <rdf:type rdf:resource="#Prevention"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#MosquitoNet">
+        <rdf:type rdf:resource="#Prevention"/>
+    </owl:NamedIndividual>
+
+    <!-- Risk Factors -->
+    <owl:NamedIndividual rdf:about="#Obesity">
+        <rdf:type rdf:resource="#RiskFactor"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#FamilyHistory">
+        <rdf:type rdf:resource="#RiskFactor"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#TravelToEndemicArea">
+        <rdf:type rdf:resource="#RiskFactor"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
